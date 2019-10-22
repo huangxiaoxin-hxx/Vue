@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/vue-2.4.0.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 开始按钮 -->
+    <input type="button" value="跑起来" @click="run">
+    <!-- 停止按钮 -->
+    <input type="button" value="停下来" @click="stop">
+    <h4>{{msg}}</h4>
+  </div>
+
+  <script>
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        msg: '跑起来，快点跑起来～～',
+        runTime: null
+      },
+      methods: {
+        run() {
+          // console.log(this.msg)
+          // 如果runTime不等于null，则证明runTime正在运行，直接跳出
+          if(this.runTime != null) return
+            this.runTime = setInterval(() => {
+              // 将第一个字和后面的字符串截取出来，之后将第一个字拼接在最后，然后覆盖旧的msg
+            var start = this.msg.substring(0, 1)
+            var end = this.msg.substring(1)
+            this.msg = end + start
+          }, 500);
+
+        },
+        stop() {
+          // 清除定时器，且将runTime赋值为null
+          clearInterval(this.runTime);
+          this.runTime = null
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
