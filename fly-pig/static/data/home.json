@@ -1,0 +1,97 @@
+{
+  "data":{
+    "inputValue" : "北京",
+    "swiperImgUrl" : [
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1rVVWprj1gK0jSZFOXXc7GpXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#f89699"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1efXkoebviK0jSZFNXXaApXXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#6fdafb"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1gO52puL2gK0jSZPhXXahvXXa-1125-352.png_790x10000.jpg_.webp",
+        "color": "#ef3e36"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1Y6BooKH2gK0jSZFEXXcqMpXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#f0581d"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1r_VJoQY2gK0jSZFgXXc5OFXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#aa4df7"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1exxwoUz1gK0jSZLeXXb9kVXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#fc3c6d"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1uCfRpXP7gK0jSZFjXXc5aXXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#f79ca2"
+      },
+      {
+        "imgUrl":"http://gw.alicdn.com/tfs/TB1lx5qpaL7gK0jSZFBXXXZZpXa-1125-352.jpg_790x10000Q75.jpg_.webp",
+        "color": "#e52844"
+      }
+    ],
+    "entry": [
+      {
+        "name": "机票",
+        "imgUrl": "https://gw.alicdn.com/tfs/TB1wTPEfubviK0jSZFNXXaApXXa-210-171.png_110x10000.jpg_.webp"
+      },
+      {
+        "name": "酒店",
+        "imgUrl": "https://gw.alicdn.com/tfs/TB13nyegbj1gK0jSZFOXXc7GpXa-210-171.png_110x10000.jpg_.webp"
+      },
+      {
+        "name": "火车票",
+        "imgUrl": "https://gw.alicdn.com/tfs/TB1iFN6gbj1gK0jSZFOXXc7GpXa-210-171.png_110x10000.jpg_.webp"
+      },
+      {
+        "name": "汽车票",
+        "imgUrl": "https://gw.alicdn.com/tfs/TB1KeybgeH2gK0jSZFEXXcqMpXa-210-171.png_110x10000.jpg_.webp"
+      },
+      {
+        "name": "门票",
+        "imgUrl": "https://gw.alicdn.com/tfs/TB1YEtZgeL2gK0jSZPhXXahvXXa-210-171.png_110x10000.jpg_.webp"
+      }
+    ],
+    "subentry": [
+      {
+        "name":"出境游",
+        "desc": "走遍全球"
+      },
+      {
+        "name":"国内游",
+        "desc": "精选路线"
+      },
+      {
+        "name":"周边游",
+        "desc": "限时领优惠",
+        "mark": 1
+      },
+      {
+        "name":"出境购",
+        "desc": "免税预购"
+      },
+      {
+        "name":"签证/上网",
+        "desc": "限时秒杀",
+        "mark": 1
+      },
+      {
+        "name":"用车",
+        "desc": "在线预约"
+      },
+      {
+        "name":"邮轮游",
+        "desc": "住海上城堡"
+      },
+      {
+        "name":"全部",
+        "desc": "更多推荐"
+      }
+    ]
+  }
+}
