@@ -43,10 +43,8 @@
             </router-link>
           </div>
         </div>
-        <van-tabs>
-          <van-tab v-for="index in 8" :key="index" :title="'标签 ' + index">
-          </van-tab>
-        </van-tabs>
+        <v-swiperTabBar :swiperTab="swiperTabBar"></v-swiperTabBar>
+        <v-homeSwiperContent :homeSwiper="homeSwiper"></v-homeSwiperContent>
       </div>
     <!-- </div> -->
     </v-scroll>
@@ -58,7 +56,8 @@ import searchBar from '@/components/common/searchBar'
 import mesIcon from '@/components/common/mesIcon'
 import swipe from '@/components/common/swipe'
 import scroll from '@/components/common/scroll'
-import BScroll from 'better-scroll'
+import swiperTabBar from '@/components/content/swiperTabBar'
+import homeSwiperContent from '@/components/content/homeSwiperContent'
 
 export default {
   name:'home',
@@ -66,7 +65,9 @@ export default {
     'v-sreachBar': searchBar,
     'v-mesIcon': mesIcon,
     'v-swipe': swipe,
-    'v-scroll': scroll
+    'v-scroll': scroll,
+    'v-swiperTabBar': swiperTabBar,
+    'v-homeSwiperContent': homeSwiperContent
   },
   data () {
     return {
@@ -74,7 +75,9 @@ export default {
       img: [],
       inputColor: '',
       entry: [],
-      subentry: []
+      subentry: [],
+      swiperTabBar: [],
+      homeSwiper: []
     }
   },
   created () {
@@ -84,7 +87,9 @@ export default {
         this.img = res.data.data.swiperImgUrl
         this.entry = res.data.data.entry
         this.subentry = res.data.data.subentry
-        // console.log(this.entry)
+        this.swiperTabBar = res.data.data.swiperTabBar
+        this.homeSwiper = res.data.data.homeSwiperContent
+        // console.log(this.homeSwiperContent)
       })
   },
   mounted () {
@@ -394,4 +399,7 @@ export default {
             width 53px
             color rgb(51, 51, 51)
             overflow hidden
+    .van-tabs
+      position relative
+      top 40px
 </style>

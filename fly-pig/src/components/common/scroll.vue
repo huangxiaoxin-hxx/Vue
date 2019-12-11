@@ -85,8 +85,10 @@ export default {
       this.scroll = new BScroll(this.$refs.wrapper, {
         click: this.click,
         probeType: this.probeType,
-        eventPassThrough: this.direction === DIRECTION_V ? DIRECTION_V : DIRECTION_H
+        scrollX: this.scrollX,
+        eventPassThrough: this.direction === DIRECTION_V ? DIRECTION_H : DIRECTION_V
       })
+      // console.log(this.scroll)
       //  是否派发滚动事件
       if (this.listenScroll) {
         this.scroll.on('scroll', (pos) => {

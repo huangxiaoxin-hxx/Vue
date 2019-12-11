@@ -92,6 +92,136 @@
         "name":"全部",
         "desc": "更多推荐"
       }
+    ],
+    "swiperTabBar": [
+      {
+        "title": "推荐",
+        "content": "猜你喜欢"
+      },
+      {
+        "title": "过年乐",
+        "content": "春节去哪里"
+      },
+      {
+        "title": "周边游",
+        "content": "短途好去处"
+      },
+      {
+        "title": "情侣",
+        "content": "浪漫之旅"
+      },
+      {
+        "title": "网红",
+        "content": "最火打卡地"
+      },
+      {
+        "title": "特价",
+        "content": "限时促销"
+      }
+    ],
+    "homeSwiperContent": [
+      [
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        }
+      ],
+      [
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        }
+      ],
+      [
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        }
+      ],
+      [
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        }
+      ],
+      [
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        }
+      ],
+      [
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        },
+        {
+          "imgUrl":"https://gw.alicdn.com/bao/uploaded/i3/2201418175803/O1CN01kn1WXT1sjovio71gr_!!2201418175803.jpg_220x10000Q75.jpg_.webp",
+          "place":"北京·当地玩乐",
+          "title": "北京奥斯汀庄园（城堡区）2天1晚自由行＋双份早餐＋独立私汤泡池",
+          "price":"480"
+        }
+      ]
     ]
   }
 }

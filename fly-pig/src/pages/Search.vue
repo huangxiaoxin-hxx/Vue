@@ -6,9 +6,9 @@
       <img src="../assets/icon/delete.png">
     </div>
     <v-recordBox title="搜索·发现" :block="findBlock" @select="savaSearch"></v-recordBox>
-    <van-dialog v-model="deleteTips" title="" >
+    <!-- <van-dialog v-model="deleteTips" title="" >
       <span>确定删除历史记录吗?</span>
-    </van-dialog>
+    </van-dialog> -->
   </div>
 </template>
 
@@ -47,7 +47,10 @@ export default {
       "deleteAllSearchHistory"
     ]),
     deleteHistory() {
-      this.deleteTips = true
+      console.log('1')
+      this.$dialog.confirm({
+        message: '是否删除历史记录'
+      });
     },
     
   },
@@ -68,7 +71,7 @@ export default {
   background-color #fff
   .delete-icon
     position absolute
-    top 55px
+    top 60px
     right 10px
     img
       width 20px
