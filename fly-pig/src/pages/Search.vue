@@ -50,7 +50,11 @@ export default {
       console.log('1')
       this.$dialog.confirm({
         message: '是否删除历史记录'
-      });
+      }).then(() => {
+        this.deleteAllSearchHistory()
+      }).catch(() => {
+        return
+      })
     },
     
   },
@@ -63,11 +67,11 @@ export default {
 <style lang="stylus" scoped>
 .container
   z-index 10000
-  position absolute
-  left 0
-  right 0
-  top 0
-  bottom 0
+  // position absolute
+  // left 0
+  // right 0
+  // top 0
+  // bottom 0
   background-color #fff
   .delete-icon
     position absolute

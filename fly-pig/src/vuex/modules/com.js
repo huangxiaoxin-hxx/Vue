@@ -2,7 +2,7 @@ import * as types from '../types'
 
 const state = {
   isShowBottomTabBar: true,
-  homeSwiperIndex: 1
+  homeSwiperIndex: 0
 }
 const getters = {
   isShowBottomTabBar: state => state.isShowBottomTabBar,

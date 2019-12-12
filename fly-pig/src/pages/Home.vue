@@ -7,7 +7,7 @@
       <v-sreachBar color="yellow" :inputValue="inputValue"></v-sreachBar>
       <v-mesIcon></v-mesIcon>
     </div>
-    <v-scroll class="scroll" ref="scroll">
+    <v-scroll class="scroll" ref="scroll" :listenScroll="true" @scroll="getScroll" :probeType="3">
     <!-- <div class="scroll" ref="scroll"> -->
       <div class="content">
         <div class="swipe">
@@ -77,7 +77,8 @@ export default {
       entry: [],
       subentry: [],
       swiperTabBar: [],
-      homeSwiper: []
+      homeSwiper: [],
+      isInputYellow: false
     }
   },
   created () {
@@ -96,9 +97,25 @@ export default {
   },
   methods: {
     getColor(data) {
+      if(this.isInputYellow) {
+        return
+      }
       this.inputColor = data
-      // console.log(data)
+      console.log(data)
     },
+    getScroll(data) {
+      // console.log(data)
+      if(data.y != 0){
+        this.isInputYellow = true
+        this.inputColor = '#fed030'
+      } else {
+        this.isInputYellow = false
+      }
+      // console.log(this.isInputYellow)
+      if(data.y <= -400) {
+        console.log(data.y)
+      }
+    }
   }
 }
 </script>

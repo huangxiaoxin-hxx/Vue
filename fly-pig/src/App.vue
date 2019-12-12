@@ -1,12 +1,13 @@
 <template>
   <div id="app">
     <router-view/>
-    <v-flyPigTabBar></v-flyPigTabBar>
+    <v-flyPigTabBar v-if="isShowBottomTabBar"></v-flyPigTabBar>
     <!-- <v-search></v-search> -->
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
 import flyPigTabBar from '@/components/content/flyPigTabBar'
 import Search from '@/pages/Search'
 export default {
@@ -14,6 +15,15 @@ export default {
   components: {
     'v-flyPigTabBar': flyPigTabBar,
     'v-search': Search
+  },
+  computed: {
+    ...mapGetters([
+      'isShowBottomTabBar'
+    ])
+  },
+  // computed: mapState(['isShowBottomTabBar']),
+  mounted () {
+    console.log(this.isShowBottomTabBar)
   }
 }
 </script>

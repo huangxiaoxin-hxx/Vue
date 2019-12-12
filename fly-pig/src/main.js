@@ -15,12 +15,13 @@ Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
-  if(to.name === 'Home'||to.name === 'Find'||to.name === 'Strategy'||to.name === 'Trip'||to.name === 'Me'){
-    // com.commit('setShowTabBarTrue')
+  if(to.path === '/home'||to.path === '/find'||to.path === '/strategy'||to.path === '/trip'||to.path === '/me' || to.path === '/'){
+    store.dispatch('setShowTabBarTrue')
   } else {
-    // com.commit('setShowTabBarFalse')
+    store.dispatch('setShowTabBarFalse')
   }
   console.log(to)
+  console.log(from)
   next()
 })
 
@@ -29,6 +30,7 @@ router.beforeEach((to, from, next) => {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
   store

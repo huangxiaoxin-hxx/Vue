@@ -34,6 +34,10 @@ export default {
       type: Boolean,
       default: false
     },
+    scrollY: {
+      type: Boolean,
+      default: true
+    },
     /**
       * 是否派发滚动事件
       */
