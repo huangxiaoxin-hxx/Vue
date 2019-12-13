@@ -17,11 +17,14 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   if(to.path === '/home'||to.path === '/find'||to.path === '/strategy'||to.path === '/trip'||to.path === '/me' || to.path === '/'){
     store.dispatch('setShowTabBarTrue')
+  } else if (to.path === '/me') {
+    
   } else {
     store.dispatch('setShowTabBarFalse')
   }
   console.log(to)
   console.log(from)
+  store.dispatch('setFromPagePath',from.path)
   next()
 })
 

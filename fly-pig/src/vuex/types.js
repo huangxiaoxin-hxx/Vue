@@ -3,3 +3,7 @@ export const SEARCH_DELETE_ALL_SEARCH_HISTORY = "SEARCH_DELETE_ALL_SEARCH_HISTOR
 export const COM_SET_SHOWTABBAR_TRUE = "COM_SET_SHOWTABBAR_TRUE" // 设置isShowBottomTabBar为true
 export const COM_SET_SHOWTABBAR_FALSE = "COM_SET_SHOWTABBAR_FALSE" // 设置isShowBottomTabBar为false
 export const COM_SET_HOME_SWIPER_INDEX = "COM_SET_HOME_SWIPER_INDEX" // 设置swiper的index值
+export const COM_SET_FROM_PAGE_PATH = "COM_SET_FROM_PAGE_PATH" //设置来自那个页面
+export const COM_SET_LOGIN = "COM_SET_LOGIN" // 设置是否为登录状态
+export const COM_SET_SCROLL = "COM_SET_SCROLL" // 设置首页两层滚动联动是否滚动
+export const COM_SET_SCROLL2 = "COM_SET_SCROLL2" // 设置首页两层滚动联动是否滚动

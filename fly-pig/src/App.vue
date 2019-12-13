@@ -23,7 +23,7 @@ export default {
   },
   // computed: mapState(['isShowBottomTabBar']),
   mounted () {
-    console.log(this.isShowBottomTabBar)
+    // console.log(this.isShowBottomTabBar)
   }
 }
 </script>

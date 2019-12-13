@@ -7,8 +7,7 @@
       <v-sreachBar color="yellow" :inputValue="inputValue"></v-sreachBar>
       <v-mesIcon></v-mesIcon>
     </div>
-    <v-scroll class="scroll" ref="scroll" :listenScroll="true" @scroll="getScroll" :probeType="3">
-    <!-- <div class="scroll" ref="scroll"> -->
+    <v-scroll class="scroll" ref="scroll" :listenScroll="true" @scroll="getScroll" :probeType="3" :isScroll="isScroll">
       <div class="content">
         <div class="swipe">
           <v-swipe :img="img" @color="getColor"></v-swipe>
@@ -46,7 +45,6 @@
         <v-swiperTabBar :swiperTab="swiperTabBar"></v-swiperTabBar>
         <v-homeSwiperContent :homeSwiper="homeSwiper"></v-homeSwiperContent>
       </div>
-    <!-- </div> -->
     </v-scroll>
   </div>
 </template>
@@ -58,6 +56,7 @@ import swipe from '@/components/common/swipe'
 import scroll from '@/components/common/scroll'
 import swiperTabBar from '@/components/content/swiperTabBar'
 import homeSwiperContent from '@/components/content/homeSwiperContent'
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name:'home',
@@ -78,8 +77,13 @@ export default {
       subentry: [],
       swiperTabBar: [],
       homeSwiper: [],
-      isInputYellow: false
+      isInputYellow: false,
     }
+  },
+  computed: {
+    ...mapGetters([
+      'isScroll'
+    ])
   },
   created () {
     this.$http.get('http://localhost:8080/static/data/home.json')
@@ -101,7 +105,7 @@ export default {
         return
       }
       this.inputColor = data
-      console.log(data)
+      // console.log(data)
     },
     getScroll(data) {
       // console.log(data)
@@ -112,10 +116,14 @@ export default {
         this.isInputYellow = false
       }
       // console.log(this.isInputYellow)
-      if(data.y <= -400) {
-        console.log(data.y)
+      if(data.y <= -395) {
+        this.setScroll(false)
+        console.log(data.y, this.isScroll)
       }
-    }
+    },
+    ...mapActions([
+      'setScroll'
+    ])
   }
 }
 </script>

@@ -7,7 +7,7 @@
     @change="swiper"
     ref="swiperToIndex">
       <van-swipe-item v-for="(item, index) in homeSwiper" :key="index">
-        <v-swiperScroll class="swiperScroll" ref="swiperScroll">
+        <v-swiperScroll class="swiperScroll" ref="swiperScroll" :listenScroll="true" @scroll="getScroll" :probeType="3" :isScroll="!isScroll">
           <div class="indexContent">
             <div class="indexBlock" v-for="(block, blockIndex) in item" :key="blockIndex">
               <router-link to="/" tag="div" class="blockLink">
@@ -52,7 +52,6 @@ export default {
   },
   data() {
     return {
-      
     }
   },
   methods: {
@@ -60,17 +59,26 @@ export default {
       this.setHomeSwiperIndex(index)
     },
     ...mapActions([
-      'setHomeSwiperIndex'
-    ])
+      'setHomeSwiperIndex',
+      'setScroll'
+    ]),
+    getScroll(data) {
+      console.log(data.y)
+      if(data.y >= 5) {
+        this.setScroll(true)
+        console.log('我是homeswiper',this.isScroll)
+      }
+    }
   },
   computed: {
     ...mapGetters([
-      'homeSwiperIndex'
+      'homeSwiperIndex',
+      'isScroll'
     ])
   },
   watch: {
     homeSwiperIndex(val) {
-      console.log(val)
+      // console.log(val)
       this.$refs.swiperToIndex.swipeTo(val)
     }
   }
@@ -87,7 +95,7 @@ export default {
     margin 0 auto
     .swiperScroll
       width 100%
-      height 700px
+      height 670px
       overflow hidden
       .indexContent
         position relative

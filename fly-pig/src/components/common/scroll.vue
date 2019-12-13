@@ -74,15 +74,29 @@ export default {
     direction: {
       type: String,
       default: DIRECTION_V
+    },
+    isScroll: {
+      type: Boolean,
+      default: true
     }
   },
   mounted () {
     setTimeout(() => {
-      this._initScroll()
+      // if (this.noScroll) {
+        this._initScroll()
+      // } 
     }, 20);
+  },
+  watch: {
+    isScroll (val) {
+      console.log(val)
+      this._initScroll ()
+      // this.refresh()
+    }
   },
   methods: {
     _initScroll () {
+      console.log(this.isScroll)
       if (!this.$refs.wrapper) {
         return
       }
@@ -90,9 +104,10 @@ export default {
         click: this.click,
         probeType: this.probeType,
         scrollX: this.scrollX,
-        eventPassThrough: this.direction === DIRECTION_V ? DIRECTION_H : DIRECTION_V
+        eventPassThrough: this.direction === DIRECTION_V ? DIRECTION_H : DIRECTION_V,
+        // stopPropagation: this.isScroll
+        scrollY: this.isScroll
       })
-      // console.log(this.scroll)
       //  是否派发滚动事件
       if (this.listenScroll) {
         this.scroll.on('scroll', (pos) => {

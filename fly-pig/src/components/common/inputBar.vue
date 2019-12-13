@@ -1,7 +1,7 @@
 <template>
   <div class="input">
     <div class="input-content">
-      <img class="back" src="../../assets/icon/back.png" alt="">
+      <v-backIcon class="back"></v-backIcon>
       <input :placeholder="inputValue" class="input" />
       <span>搜索</span>
     </div>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import backIcon from '@/components/common/backIcon'
 export default {
   name: 'inputBar',
   props: {
@@ -18,6 +19,9 @@ export default {
     }
   },
   methods: {
+  },
+  components: {
+    'v-backIcon': backIcon
   }
 }
 </script>

@@ -1,5 +1,6 @@
 <template>
-  <v-swiperScroll class="swiperScroll" ref="swiperScroll" :scrollX="true" direction="horizontal">
+  <v-swiperScroll class="swiperScroll" ref="swiperScroll" :scrollX="true" direction="horizontal"
+  :listenScroll="true" @scroll="getScroll" :probeType="3">
     <div class="swiperTabBar">
       <div class="swiperTabBar-item" v-for="(item, index) in swiperTab" :key="index" @click.stop="selectSwiperTabBar(index)">
         <div :class="[isSelect === index ? 'select': '']">
@@ -35,10 +36,18 @@ export default {
       // console.log('index',index)
       this.setHomeSwiperIndex(index)
       // console.log(this.homeSwiperIndex)
+      if(index<3) {
+        this.$refs.swiperScroll.scrollTo(0,0,200)
+      } else {
+        this.$refs.swiperScroll.scrollTo(-66,0,200)
+      }
     },
     ...mapActions([
       'setHomeSwiperIndex'
-    ])
+    ]),
+    getScroll(data) {
+      // console.log(data)
+    }
   },
   computed:{
     isSelect() {

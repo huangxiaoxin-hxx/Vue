@@ -24,7 +24,7 @@
       </div>
       <span class="tab-text">行程</span>
     </router-link>
-    <router-link to="/me" tag="div" class="tab-item">
+    <router-link @click.native="goToMe" to="/me" tag="div" class="tab-item">
       <div class="tab-img">
         <img src="../../assets/icon/wode.png" alt="">
       </div>
@@ -35,8 +35,27 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
-
+  name: "tabBarIcon",
+  data () {
+    return {
+    }
+  },
+  computed: {
+    ...mapGetters([
+      'isLogin'
+    ])
+  },
+  methods: {
+    goToMe() {
+      if(this.isLogin) {
+        this.$router.push({path:'/me'})
+      } else {
+        this.$router.push({path:'/Login'})
+      }
+    }
+  }
 }
 </script>
 
