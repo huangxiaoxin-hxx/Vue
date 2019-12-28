@@ -36,11 +36,6 @@ export default {
       // console.log('index',index)
       this.setHomeSwiperIndex(index)
       // console.log(this.homeSwiperIndex)
-      if(index<3) {
-        this.$refs.swiperScroll.scrollTo(0,0,200)
-      } else {
-        this.$refs.swiperScroll.scrollTo(-66,0,200)
-      }
     },
     ...mapActions([
       'setHomeSwiperIndex'
@@ -56,6 +51,15 @@ export default {
     ...mapGetters([
       'homeSwiperIndex'
     ])
+  },
+  watch: {
+    homeSwiperIndex(val) {
+      if(val<3) {
+        this.$refs.swiperScroll.scrollTo(0,0,200)
+      } else {
+        this.$refs.swiperScroll.scrollTo(-66,0,200)
+      }
+    }
   }
 }
 </script>

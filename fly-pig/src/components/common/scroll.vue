@@ -82,16 +82,16 @@ export default {
   },
   mounted () {
     setTimeout(() => {
-      // if (this.noScroll) {
+      if (this.isScroll) {
         this._initScroll()
-      // } 
+      } 
     }, 20);
   },
   watch: {
     isScroll (val) {
       console.log(val)
       this._initScroll ()
-      // this.refresh()
+      this.refresh()
     }
   },
   methods: {
@@ -105,8 +105,7 @@ export default {
         probeType: this.probeType,
         scrollX: this.scrollX,
         eventPassThrough: this.direction === DIRECTION_V ? DIRECTION_H : DIRECTION_V,
-        // stopPropagation: this.isScroll
-        scrollY: this.isScroll
+        stopPropagation: this.isScroll
       })
       //  是否派发滚动事件
       if (this.listenScroll) {
@@ -158,13 +157,6 @@ export default {
       this.scroll && this.scroll.scrollToElement.apply(this.scroll, arguments)
     },
   },
-  watch: {
-    data () { //监听数据变化，延时xx时间后刷新better-scroll的效果，保证滚动效果的正常
-      setTimeout(() => {
-        this.refresh()
-      }, this.refreshDelay);
-    }
-  }
 }
 </script>
 

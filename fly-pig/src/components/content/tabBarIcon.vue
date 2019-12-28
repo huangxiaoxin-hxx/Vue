@@ -24,7 +24,7 @@
       </div>
       <span class="tab-text">行程</span>
     </router-link>
-    <router-link @click.native="goToMe" to="/me" tag="div" class="tab-item">
+    <router-link to="/me" tag="div" class="tab-item">
       <div class="tab-img">
         <img src="../../assets/icon/wode.png" alt="">
       </div>
@@ -48,30 +48,23 @@ export default {
     ])
   },
   methods: {
-    goToMe() {
-      if(this.isLogin) {
-        this.$router.push({path:'/me'})
-      } else {
-        this.$router.push({path:'/Login'})
-      }
-    }
+    
   }
 }
 </script>
 
 <style lang="stylus" scoped>
-@import "../../assets/css/fun"
 .tab-flex
   display flex
   .tab-item
     flex 1
     text-align center
-    width px2rem(80px)
+    width 80px
     .tab-img
       display block
-      width px2rem(80px)
-      height px2rem(80px)
-      line-height px2rem(80px)
+      width 40px
+      height 40px
+      line-height 40px
       margin 0 auto
       border-radius 50%
       img

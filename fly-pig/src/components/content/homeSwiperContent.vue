@@ -5,7 +5,8 @@
     class="swiper"
     :show-indicators="false"
     @change="swiper"
-    ref="swiperToIndex">
+    ref="swiperToIndex"
+    :stop-propagation="true">
       <van-swipe-item v-for="(item, index) in homeSwiper" :key="index">
         <v-swiperScroll class="swiperScroll" ref="swiperScroll" :listenScroll="true" @scroll="getScroll" :probeType="3" :isScroll="!isScroll">
           <div class="indexContent">

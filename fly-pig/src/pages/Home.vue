@@ -99,6 +99,9 @@ export default {
   },
   mounted () {
   },
+  updated () {
+    console.log(this.isScroll)
+  },
   methods: {
     getColor(data) {
       if(this.isInputYellow) {
@@ -116,9 +119,9 @@ export default {
         this.isInputYellow = false
       }
       // console.log(this.isInputYellow)
-      if(data.y <= -395) {
+      if(data.y <= -390) {
         this.setScroll(false)
-        console.log(data.y, this.isScroll)
+        // console.log(data.y)
       }
     },
     ...mapActions([

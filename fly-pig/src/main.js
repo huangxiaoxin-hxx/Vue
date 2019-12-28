@@ -7,7 +7,11 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 import axios from 'axios'
 import store from './vuex/store'
-// import com from './vuex/modules/com'
+import 'amfe-flexible'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
 Vue.use(Vant);
 // Vue.use(ElementUI);
 Vue.prototype.$http = axios
@@ -17,12 +21,18 @@ Vue.config.productionTip = false
 router.beforeEach((to, from, next) => {
   if(to.path === '/home'||to.path === '/find'||to.path === '/strategy'||to.path === '/trip'||to.path === '/me' || to.path === '/'){
     store.dispatch('setShowTabBarTrue')
-  } else if (to.path === '/me') {
-    
   } else {
     store.dispatch('setShowTabBarFalse')
-  }
-  console.log(to)
+  } 
+  if (to.path === '/me') {
+    console.log(1)
+    if (sessionStorage.getItem('userInfo')) {
+      next()
+    } else {
+      next({path:'/login'})
+    }
+  } 
+  // console.log(to)
   console.log(from)
   store.dispatch('setFromPagePath',from.path)
   next()

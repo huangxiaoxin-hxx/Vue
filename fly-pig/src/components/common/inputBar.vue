@@ -2,6 +2,7 @@
   <div class="input">
     <div class="input-content">
       <v-backIcon class="back"></v-backIcon>
+      <!-- <img class="back" src="../../assets/icon/back.png" alt=""> -->
       <input :placeholder="inputValue" class="input" />
       <span>搜索</span>
     </div>
@@ -57,9 +58,11 @@ export default {
       padding-left 12px
       caret-color #e7a431
       margin 0 auto
+      font-size 0.4rem
     span
       display block
       width 60px
       text-align center
       line-height 50px
+      font-size 0.4rem
 </style>

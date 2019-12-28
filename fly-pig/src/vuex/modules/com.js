@@ -6,7 +6,6 @@ const state = {
   fromPagePath: '',
   isLogin: false,
   isScroll: true,
-  isScroll2: false
 }
 const getters = {
   isShowBottomTabBar: state => state.isShowBottomTabBar,
@@ -14,7 +13,6 @@ const getters = {
   fromPagePath: state => state.fromPagePath,
   isLogin: state => state.isLogin,
   isScroll: state => state.isScroll,
-  isScroll2: state => state.isScroll2,
 }
 const mutations = {
   [types.COM_SET_SHOWTABBAR_TRUE] (state) {
@@ -34,9 +32,6 @@ const mutations = {
   },
   [types.COM_SET_SCROLL] (state, bl) {
     state.isScroll = bl
-  },
-  [types.COM_SET_SCROLL2] (state, bl) {
-    state.isScroll2 = bl
   }
 }
 const actions = {
@@ -59,9 +54,6 @@ const actions = {
   },
   setScroll ({commit}, bl) {
     commit(types.COM_SET_SCROLL, bl)
-  },
-  setScroll2 ({commit}, bl) {
-    commit(types.COM_SET_SCROLL2, bl)
   }
 }
 
