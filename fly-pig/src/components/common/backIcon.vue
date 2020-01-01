@@ -1,5 +1,6 @@
 <template>
-    <img class="back" src="../../assets/icon/back.png" alt="" @click="back">
+    <img v-if="white" class="back" src="../../assets/icon/backwhite.png" alt="" @click="back">
+    <img v-else class="back" src="../../assets/icon/back.png" alt="" @click="back">
 </template>
 
 <script>
@@ -9,6 +10,12 @@ export default {
   data() {
     return {
       
+    }
+  },
+  props:{
+    white: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {

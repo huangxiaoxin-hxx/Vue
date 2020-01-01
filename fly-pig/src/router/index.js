@@ -4,6 +4,7 @@ import Home from '@/pages/Home'
 import Search from '@/pages/Search'
 import Me from '@/pages/Me'
 import Login from '@/pages/Login'
+import MeOrder from '@/pages/MeOrder'
 
 Vue.use(Router)
 
@@ -29,5 +30,10 @@ export default new Router({
       name: 'Login',
       component: Login
     },
+    {
+      path: '/MeOrder',
+      name: 'MeOrder',
+      component: MeOrder
+    }
   ]
 })

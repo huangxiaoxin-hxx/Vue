@@ -1,0 +1,117 @@
+{
+  "firstSwiper": [
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB12X5id7L0gK0jSZFAXXcA9pXa-263-198.png",
+      "name": "里程抵现"
+    },
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1KHKkd7T2gK0jSZPcXXcKkpXa-263-198.png",
+      "name": "兑大品牌积分"
+    },
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1v9CkdYH1gK0jSZFwXXc7aXXa-263-198.png",
+      "name": "加速升F2"
+    },
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1_F5id7L0gK0jSZFAXXcA9pXa-263-198.png",
+      "name": "淘宝心选"
+    }
+  ],
+  "swiper": [
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1LldWrG61gK0jSZFlXXXDKFXa-513-288.jpg",
+      "name": "全球精选",
+      "content": "5里程兑换200元大额红包"
+    },
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1VVuSmAT2gK0jSZFkXXcIQFXa-513-288.jpg",
+      "name": "酒店精选",
+      "content": "享最高立减100元会员红包"
+    },
+    {
+      "imgUrl": "https://gw.alicdn.com/tfs/TB1EBQulQP2gK0jSZPxXXacQpXa-513-288.png",
+      "name": "穷游旗舰店",
+      "content": "F2/F3专享城市精品商品"
+    }
+  ],
+  "contentBarBlock": [
+    {
+      "name": "品牌会员卡",
+      "content": "20家集团",
+      "redText": "特领"
+    },
+    {
+      "name": "红包卡劵",
+      "content": "可用",
+      "redText": "9张"
+    },
+    {
+      "name": "飞猪里程",
+      "content": "积累",
+      "redText": "0"
+    }
+  ],
+  "meOrder": [
+    {
+      "icon": "balance-list",
+      "name": "待付款",
+      "path": "/MeOrder?index=1"
+    },
+    {
+      "icon": "underway",
+      "name": "处理中",
+      "path": "/MeOrder?index=2"
+    },
+    {
+      "icon": "checked",
+      "name": "待出行",
+      "path": "/MeOrder?index=3"
+    },
+    {
+      "icon": "chat",
+      "name": "待评价",
+      "path": "/MeOrder?index=4"
+    },
+    {
+      "icon": "todo-list",
+      "name": "退款/售后",
+      "path": "/MeOrder?index=5"
+    }
+  ],
+  "meTool1": [
+    {
+      "icon": "3",
+      "name": "收藏夹"
+    },
+    {
+      "icon": "4",
+      "name": "浏览历史"
+    },
+    {
+      "icon": "0",
+      "name": "关注店铺"
+    },
+    {
+      "icon": "0",
+      "name": "购物车"
+    }
+  ],
+  "meTool2": [
+    {
+      "icon": "manager",
+      "name": "常用信息"
+    },
+    {
+      "icon": "gold-coin",
+      "name": "口令兑换"
+    },
+    {
+      "icon": "bell",
+      "name": "我的客服"
+    },
+    {
+      "icon": "warning",
+      "name": "意见反馈"
+    }
+  ]
+}
