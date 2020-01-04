@@ -56,9 +56,22 @@ let insertUser = function (value) {
   return allServies.query(_sql, value)
 }
 
+// 查找当前用户的票
+let findAllTicket = function (username) {
+  let _sql = `select * from ticket${username};`
+  return allServies.query(_sql)
+}
+
+// 通过ID删除票
+let deleteTicketById = function (username,id) {
+  let _sql = `delete from ticket${username} where id=${id};`
+  return allServies.query(_sql)
+}
 module.exports = {
   getAllUsers,
   userLogin,
   findUser,
-  insertUser
+  insertUser,
+  findAllTicket,
+  deleteTicketById
 }

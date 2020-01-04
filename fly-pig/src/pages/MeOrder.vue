@@ -45,6 +45,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color #fafafa
+  z-index 10
   .meOrderTop
     height 1.1rem
     display flex

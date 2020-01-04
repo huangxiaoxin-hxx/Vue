@@ -7,3 +7,5 @@ export const COM_SET_FROM_PAGE_PATH = "COM_SET_FROM_PAGE_PATH" //设置来自那
 export const COM_SET_LOGIN = "COM_SET_LOGIN" // 设置是否为登录状态
 export const COM_SET_SCROLL = "COM_SET_SCROLL" // 设置首页两层滚动联动是否滚动
 export const COM_SET_SCROLL2 = "COM_SET_SCROLL2" // 设置首页两层滚动联动是否滚动
+export const TICKET_DEL_BYID = "TICKET_DEL_BYID"  // 根据id删除订单
+export const TICKET_SAVE_ALL = "TICKET_SAVE_ALL"  // 存入数据

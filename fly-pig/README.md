@@ -26,7 +26,7 @@ create table ticket18079143737(
 
 insert into ticket18079143737(carid,departuredate,arrivedate,status,departureaddress,arriveaddress,cost,countcost)
 values
-('D6549','2020-01-16 18:30:00','2020-01-16 19:46:00',5,'南昌西','南丰',53,106);
+('D6549','2019-01-16 18:30:00','2019-01-16 19:46:00',5,'南昌西','南丰',53,106);
 
 insert into ticket18079143737(carid,departuredate,arrivedate,status,departureaddress,arriveaddress,cost,countcost)
 values
