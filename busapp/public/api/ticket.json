@@ -1,0 +1,201 @@
+{
+  "success": true,
+  "data": {
+    "usualTicket": [
+      {
+        "id": 1,
+        "start": "东华理工",
+        "end": "江西财经",
+        "time": "9:30 pm",
+        "price": "¥2",
+        "person": 4
+      },
+      {
+        "id": 2,
+        "start": "江西财经",
+        "end": "东华理工",
+        "time": "9:30 pm",
+        "price": "¥2",
+        "person": 0
+      },
+      {
+        "id": 3,
+        "start": "东华理工",
+        "end": "江西财经",
+        "time": "2:30 pm",
+        "price": "¥2",
+        "person": 10
+      },
+      {
+        "id": 4,
+        "start": "江西财经",
+        "end": "东华理工",
+        "time": "2:30 pm",
+        "price": "¥2",
+        "person": 1
+      },
+      {
+        "id": 5,
+        "start": "东华理工",
+        "end": "南昌大学",
+        "time": "9:30 pm",
+        "price": "¥2",
+        "person": 2
+      },
+      {
+        "id": 6,
+        "start": "南昌大学",
+        "end": "东华理工",
+        "time": "9:30 pm",
+        "price": "¥2",
+        "person": 6
+      },
+      {
+        "id": 7,
+        "start": "东华理工",
+        "end": "南昌大学",
+        "time": "2:30 am",
+        "price": "¥2",
+        "person": 4
+      },
+      {
+        "id": 8,
+        "start": "南昌大学",
+        "end": "东华理工",
+        "time": "2:30 am",
+        "price": "¥2",
+        "person": 4
+      },
+      {
+        "id": 9,
+        "start": "东华理工",
+        "end": "华东交大",
+        "time": "9:30 pm",
+        "price": "¥2",
+        "person": 4
+      },
+      {
+        "id": 10,
+        "start": "华东交大",
+        "end": "东华理工",
+        "time": "9:30 pm",
+        "price": "¥2",
+        "person": 4
+      },
+      {
+        "id": 11,
+        "start": "东华理工",
+        "end": "华东交大",
+        "time": "2:30 am",
+        "price": "¥2",
+        "person": 4
+      },
+      {
+        "id": 12,
+        "start": "华东交大",
+        "end": "东华理工",
+        "time": "2:30 am",
+        "price": "¥2",
+        "person": 4
+      }
+    ],
+    "holidaysTicket": [
+      {
+        "id": 1,
+        "start": "东华理工",
+        "end": "南昌西",
+        "time": "9:30 pm",
+        "price": "¥1",
+        "person": 10
+      },
+      {
+        "id": 2,
+        "start": "东华理工",
+        "end": "南昌西",
+        "time": "10:30 pm",
+        "price": "¥1",
+        "person": 12
+      },
+      {
+        "id": 3,
+        "start": "东华理工",
+        "end":  "南昌站",
+        "time": "9:30 pm",
+        "price": "¥1",
+        "person": 10
+      },
+      {
+        "id": 4,
+        "start": "东华理工",
+        "end": "南昌站",
+        "time": "10:30 pm",
+        "price": "¥1",
+        "person": 1
+      },
+      {
+        "id": 5,
+        "start": "东华理工",
+        "end": "南昌西",
+        "time": "1:30 am",
+        "price": "¥1",
+        "person": 2
+      },
+      {
+        "id": 6,
+        "start": "东华理工",
+        "end": "南昌西",
+        "time": "2:30 pm",
+        "price": "¥1",
+        "person": 6
+      },
+      {
+        "id": 7,
+        "start": "东华理工",
+        "end": "南昌站",
+        "time": "1:30 am",
+        "price": "¥1",
+        "person": 4
+      },
+      {
+        "id": 8,
+        "start": "东华理工",
+        "end": "南昌站",
+        "time": "2:30 am",
+        "price": "¥1",
+        "person": 4
+      },
+      {
+        "id": 9,
+        "start": "东华理工",
+        "end": "南昌西",
+        "time": "5:30 am",
+        "price": "¥1",
+        "person": 4
+      },
+      {
+        "id": 10,
+        "start": "东华理工",
+        "end": "南昌西",
+        "time": "7:30 pm",
+        "price": "¥1",
+        "person": 4
+      },
+      {
+        "id": 11,
+        "start": "东华理工",
+        "end": "南昌站",
+        "time": "5:30 am",
+        "price": "¥1",
+        "person": 4
+      },
+      {
+        "id": 12,
+        "start": "东华理工",
+        "end": "南昌站",
+        "time": "7:30 am",
+        "price": "¥1",
+        "person": 4
+      }
+    ]
+  }
+}

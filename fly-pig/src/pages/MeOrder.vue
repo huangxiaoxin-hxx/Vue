@@ -12,10 +12,9 @@
         <span>{{item}}</span>
       </div>
     </div>
-    <v-orderContent></v-orderContent>
+    <v-orderContent :active="active"></v-orderContent>
   </div>
 </template>
-
 <script>
 import backIcon from '@/components/common/backIcon'
 import orderContent from '@/components/content/orderContent'
@@ -31,10 +30,18 @@ export default {
       active: 0
     }
   },
+  created() {
+    this.createSelect()
+  },
   methods: {
     select(index) {
       console.log(index)
       this.active = index
+    },
+    createSelect() {
+      let active = this.$route.query.index && this.$route.query.index
+      console.log(active)
+      this.active = active && parseInt(active)
     }
   }
 }

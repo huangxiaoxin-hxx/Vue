@@ -10,9 +10,12 @@ import store from './vuex/store'
 import 'amfe-flexible'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import monent from 'moment'
+import momentTZ from 'moment-timezone'
 
 Vue.use(ElementUI);
 Vue.use(Vant);
+Vue.use(monent).use(momentTZ);
 // Vue.use(ElementUI);
 Vue.prototype.$http = axios
 

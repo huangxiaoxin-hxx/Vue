@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" v-if="isShow">
     <div class="ticketBlock">
       <div class="content">
         <div class="top">
@@ -82,6 +82,10 @@ export default {
     ticketItem: {
       type: Object,
       defualt: {}
+    },
+    active: {
+      type: Number,
+      defualt: 0
     }
   },
   data () {
@@ -95,11 +99,15 @@ export default {
     departureMonth: '',
     departureYear: '',
     departureDate: '',
-    isExpire: false
+    isExpire: false,
+    isShow: true
     }
   },
   created() {
     this.date()
+  },
+  watch: {
+    active: 'activeChange'
   },
   methods: {
     date() {
@@ -162,6 +170,9 @@ export default {
       }).catch(() => {
         return
       })
+    },
+    activeChange() {
+      console.log(this.active)
     }
   }
 }

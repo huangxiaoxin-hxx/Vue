@@ -2,7 +2,7 @@
   <div class="container">
     <v-scroll class="scroll" ref="scroll">
       <div class="content">
-        <v-ticket v-for="item in ticketData" :key="item.id" :ticketItem="item"></v-ticket>
+        <v-ticket v-for="item in ticketData" :key="item.id" :ticketItem="item" :active="active"></v-ticket>
       </div>
     </v-scroll>
   </div>
@@ -12,11 +12,19 @@
 import scroll from '@/components/common/scroll'
 import ticket from '@/components/common/ticket'
 import { mapActions, mapGetters } from "vuex";
+import moment from 'moment'
+import SimpleDateFormat from 'simpledateformat'
 export default {
   name: 'orderContent',
   components: {
     'v-scroll': scroll,
     'v-ticket': ticket
+  },
+  props:{
+    active: {
+      type: Number,
+      default: 0
+    }
   },
   created() {
     this.initDetail()
@@ -43,7 +51,7 @@ export default {
         if(res.data.code === '200') {
           console.log(res.data.data)
           this.saveAllTicket(res.data.data)
-          console.log(this.ticketData)
+          // console.log(this.ticketData)
         } else {
           this.$toast(res.data.mess)
         }
