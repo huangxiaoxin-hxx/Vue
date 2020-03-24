@@ -1,0 +1,37 @@
+{
+  "success": true,
+  "data": {
+    "user": [
+      {
+        "username": "10000001",
+        "password": "123456",
+        "name": "小明",
+        "wallet": 20
+      },
+      {
+        "username": "10000002",
+        "password": "123456",
+        "name": "小红",
+        "wallet": 20
+      },
+      {
+        "username": "10000003",
+        "password": "123456",
+        "name": "大头",
+        "wallet": 20
+      },
+      {
+        "username": "10000004",
+        "password": "123456",
+        "name": "小紫",
+        "wallet": 20
+      },
+      {
+        "username": "10000005",
+        "password": "123456",
+        "name": "小黑",
+        "wallet": 20
+      }
+    ]
+  }
+}

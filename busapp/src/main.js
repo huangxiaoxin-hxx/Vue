@@ -4,9 +4,10 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import 'vant/lib/index.css';
-import { Toast, Button, Tabbar, TabbarItem, Tab, Tabs, Calendar, Cell, Icon } from 'vant';
+import { Field, Form, Toast, Button, Tabbar, TabbarItem, Tab, Tabs, Calendar, Cell, Icon } from 'vant';
 
 Vue.use(Toast);
+Vue.use(Form);
 Vue.use(Tab);
 Vue.use(Tabs);
 Vue.use(Tabbar);
@@ -15,6 +16,27 @@ Vue.use(Calendar);
 Vue.use(Cell);
 Vue.use(Icon);
 Vue.use(Button);
+Vue.use(Field)
+
+router.beforeEach((to, from, next) => {
+  if(to.path === '/home'||to.path === '/admin'||to.path === '/me' || to.path === '/'){
+    store.dispatch('setShowTabBarTrue')
+  } else {
+    store.dispatch('setShowTabBarFalse')
+  } 
+  if (to.path === '/me') {
+    console.log(1)
+    if (sessionStorage.getItem('userInfo')) {
+      next()
+    } else {
+      next({path:'/login'})
+    }
+  } 
+  // console.log(to)
+  // console.log(from)
+  store.dispatch('setFromPagePath',from.path)
+  next()
+})
 
 Vue.config.productionTip = false
 
