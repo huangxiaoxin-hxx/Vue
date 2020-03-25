@@ -24,7 +24,7 @@
 
 <script>
 import TicketItem from "../components/ticketItem";
-import axios from "axios";
+// import axios from "axios";
 import { mapActions, mapGetters } from "vuex";
 export default {
   name: "ticket",
@@ -48,19 +48,6 @@ export default {
   created() {
     if (this.isShow) {
       this.getCurrentDate();
-      axios.get("/api/ticket.json").then(res => {
-        this.usualTickets = res.data.data.usualTicket
-        this.saveAllUsualTicket(res.data.data.usualTicket);
-        // this.ticketLists = res.data.data.usualTicket
-        // console.log(this.ticketLists)
-      });
-    } else {
-      axios.get("/api/ticket.json").then(res => {
-        this.holidaysTickets = res.data.data.holidaysTickets
-        this.saveAllHolidaysTicket(res.data.data.holidaysTicket);
-        // this.ticketLists = res.data.data.usualTicket
-        // console.log(this.ticketLists)
-      });
     }
   },
   // watch:{

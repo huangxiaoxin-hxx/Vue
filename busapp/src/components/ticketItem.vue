@@ -49,7 +49,8 @@ export default {
     ...mapActions([
       'addTicket',
       'subBalance',
-      'ticketState'
+      'ticketState',
+      "addReturnTicket"
     ]),
     buyTicket(id) {
       if (!sessionStorage.getItem('userInfo')) {
@@ -78,6 +79,7 @@ export default {
             "id": id
           }
           this.ticketState(ticketMap)
+          this.addReturnTicket(item)
           // console.log(item)
         }
       })
@@ -87,10 +89,11 @@ export default {
     mergeObject() {
       const date = {
         "date": this.currentDate,
-        "state": true
+        "state": true,
+        "username": this.user.username
       }
       Object.assign(this.ticketItem, date);
-    }
+    },
   },
   
 }

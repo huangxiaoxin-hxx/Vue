@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "data": {
+    "admin": [
+      {
+        "admin": "001",
+        "password": "123456",
+        "name": "管老师"
+      },
+      {
+        "admin": "002",
+        "password": "123456",
+        "name": "理老师"
+      },
+      {
+        "admin": "003",
+        "password": "123456",
+        "name": "员老师"
+      }
+    ]
+  }
+}

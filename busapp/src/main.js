@@ -4,7 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import 'vant/lib/index.css';
-import { Field, Form, Toast, Button, Tabbar, TabbarItem, Tab, Tabs, Calendar, Cell, Icon } from 'vant';
+import { Popup, Picker, Field, Form, Toast, Button, Tabbar, TabbarItem, Tab, Tabs, Calendar, Cell, Icon } from 'vant';
 
 Vue.use(Toast);
 Vue.use(Form);
@@ -16,7 +16,9 @@ Vue.use(Calendar);
 Vue.use(Cell);
 Vue.use(Icon);
 Vue.use(Button);
-Vue.use(Field)
+Vue.use(Field);
+Vue.use(Picker);
+Vue.use(Popup);
 
 router.beforeEach((to, from, next) => {
   if(to.path === '/home'||to.path === '/admin'||to.path === '/me' || to.path === '/'){
@@ -32,6 +34,14 @@ router.beforeEach((to, from, next) => {
       next({path:'/login'})
     }
   } 
+  if (to.path === '/admin') {
+    console.log(1)
+    if (sessionStorage.getItem('adminInfo')) {
+      next()
+    } else {
+      next({path:'/adminLogin'})
+    }
+  }
   // console.log(to)
   // console.log(from)
   store.dispatch('setFromPagePath',from.path)

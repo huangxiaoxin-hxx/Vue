@@ -43,6 +43,15 @@ const mutations = {
       console.log('没找到')
     })
     console.log(state.tickets)
+  },
+  [types.DEL_USER_TICKET] (state, map) {
+    state.tickets.map((item, index) => {
+      if(item.date == map.date && item.id == map.id && item.username == map.username) {
+        state.tickets.splice(index, 1)
+        state.user.wallet = state.user.wallet + map.price
+        return
+      }
+    })
   }
 }
 
@@ -69,7 +78,10 @@ const actions = {
   },
   ticketState ({commit}, map) {
     commit(types.TICKET_STATE, map)
-  }
+  },
+  delUserTicket ({commit}, map) {
+    commit(types.DEL_USER_TICKET, map)
+  },
 }
 
 export default {

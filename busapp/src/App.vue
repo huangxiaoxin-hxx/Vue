@@ -8,7 +8,8 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import axios from "axios";
+import { mapGetters, mapActions } from "vuex";
 import tabBar from "./components/tabBar";
 export default {
   name: "app",
@@ -30,12 +31,26 @@ export default {
     };
   },
   methods: {
+    ...mapActions([
+      "saveAllUsualTicket",
+      "saveAllHolidaysTicket"
+    ]),
     reload() {
       this.isRouterAlive = false; //先关闭，
       this.$nextTick(function() {
         this.isRouterAlive = true; //再打开
       });
     }
+  },
+  created() {
+    axios.get("/api/ticket.json").then(res => {
+      this.usualTickets = res.data.data.usualTicket;
+      this.saveAllUsualTicket(res.data.data.usualTicket);
+    });
+    axios.get("/api/ticket.json").then(res => {
+      this.holidaysTickets = res.data.data.holidaysTickets;
+      this.saveAllHolidaysTicket(res.data.data.holidaysTicket);
+    });
   }
 };
 </script>
